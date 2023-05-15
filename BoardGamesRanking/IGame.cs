@@ -1,5 +1,4 @@
-﻿
-using static BoardGamesRanking.GameBase;
+﻿using static BoardGamesRanking.GameBase;
 
 
 namespace BoardGamesRanking

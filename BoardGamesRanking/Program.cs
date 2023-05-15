@@ -1,5 +1,4 @@
-﻿
-using BoardGamesRanking;
+﻿using BoardGamesRanking;
 
 Console.WriteLine("**************************");
 Console.WriteLine();
@@ -7,7 +6,14 @@ Console.WriteLine("Board Game Ranking");
 Console.WriteLine();
 Console.WriteLine("**************************");
 
-var game = new GameInDocument("Talisman", "Galaktyka");
+Console.WriteLine("Insert game name:");
+string gameName = Console.ReadLine();
+
+Console.WriteLine("Insert game publisher:");
+string gamePublisher = Console.ReadLine();
+
+var game = new GameInDocument($"{gameName}",$"{gamePublisher}");
+
 game.RateAdded += Game_RateAdded;
 
 void Game_RateAdded(object sender, EventArgs args)

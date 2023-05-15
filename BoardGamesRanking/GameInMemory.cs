@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BoardGamesRanking
+﻿namespace BoardGamesRanking
 {
     public class GameInMemory : GameBase
     {
@@ -27,18 +21,6 @@ namespace BoardGamesRanking
                 {
                     RateAdded(this, new EventArgs());
                 }
-            }
-            else
-            {
-                throw new ArgumentOutOfRangeException(nameof(rate), $"{(nameof(rate))} is incorrect. Numbers form 0 to 10 required");
-            }
-        }
-
-        public override void AddRate(string rate)
-        {
-            if (float.TryParse(rate, out float result))
-            {
-                this.AddRate(result);
             }
             else
             {
